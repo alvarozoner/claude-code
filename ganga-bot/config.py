@@ -21,9 +21,11 @@ MIN_CONDITION = "good"
 # --- Notificaciones por Telegram (opcional) ---
 # 1. Crea un bot en @BotFather y pega el token
 # 2. Escribe /start al bot y obtén tu chat_id con @userinfobot
-TELEGRAM_ENABLED   = False
-TELEGRAM_BOT_TOKEN = "TU_TOKEN_AQUI"
-TELEGRAM_CHAT_ID   = "TU_CHAT_ID_AQUI"
+import os
+
+TELEGRAM_ENABLED   = True
+TELEGRAM_BOT_TOKEN = os.environ.get("TELEGRAM_BOT_TOKEN", "")
+TELEGRAM_CHAT_ID   = os.environ.get("TELEGRAM_CHAT_ID", "")
 
 # --- Notificaciones por email (opcional) ---
 EMAIL_ENABLED  = False
